@@ -67,10 +67,10 @@ iframe {
 table {
     margin-top: 15px;
     border-collapse: collapse;
-    border: 1px solid #aaa;
+    border: 2px solid #000000;
     width: 100%;
     }
 
     table tbody tr td{
-        border: #aaa 1px solid;
+        border: #000000 1px solid;
     }
