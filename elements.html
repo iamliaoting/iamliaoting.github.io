@@ -1,23 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheets" href="css/stylesheets.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>HTML Elements</title>
+    <link href="stylesheets.css" rel="stylesheet" type="text/css" >
+    <title>Study HTML</title>
+    <script>
+        // 计算页面的实际高度，iframe自适应会用到
+        function calcPageHeight(doc) {
+            var cHeight = Math.max(doc.body.clientHeight, doc.documentElement.clientHeight)
+            var sHeight = Math.max(doc.body.scrollHeight, doc.documentElement.scrollHeight)
+            var height  = Math.max(cHeight, sHeight)
+            return height
+        }
+        //根据ID获取iframe对象
+        var ifr = document.getElementById('main')
+        ifr.onload = function() {
+              //解决打开高度太高的页面后再打开高度较小页面滚动条不收缩
+              ifr.style.height='0px';
+            var iDoc = ifr.contentDocument || ifr.document
+            var height = calcPageHeight(iDoc)
+            if(height < 850){
+                height = 850;
+            }
+            ifr.style.height = height + 'px'
+        }
+      </script>
 </head>
 <body>
-    <ul style="list-style: none">
-        <li><a href="">basic</a>
-            <ul>
-                <li><a href="#">&lt!DOCTYPE&gt</a>
-
-                </li>
-            </ul>
-            
+    <ul>
+        <li>
+            <a href="index.html">HOME</a>
+        </li>
+        <li><a>HTML Elements</a>
+        <ul>
+            <li><a href="index.html" target="main">BASICS</a></li>
+            <li><a>Formatting</a></li>
+            <li><a>Form & Input</a></li>
+            <li><a>Frames</a></li>
+            <li><a>Images</a></li>
+            <li><a href="">Audio/Video</a></li>
+            <li><a href="">Links</a></li>
+            <li><a href="">Lists</a></li>
+            <li><a href="">Tables</a></li>
+            <li><a href="">Styles and Semantics</a></li>
+            <li><a href="">Meta Info</a></li>
+            <li><a href="">Programming</a></li>
+        </ul>
         </li>
     </ul>
-    <a href="index.html">HOME</a>
+    <div class="main_page">
+        <iframe scrolling="no" id="main" name="main" frameborder="1"  src="" 
+           style="min-height:620px;width:60%;height:100%;"></iframe>
+   </div>
 </body>
 </html>

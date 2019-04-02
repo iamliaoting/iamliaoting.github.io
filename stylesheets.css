@@ -1,7 +1,7 @@
 body {
     background: no-repeat;
     background-size: none; 
-    margin-left: 10%; 
+    margin-left: 5%; 
    } 
 
 ul { 
@@ -32,9 +32,31 @@ ul li a:hover {
    } 
 
 ul li ul li{ 
-   display: none; 
+   display: block; 
 } 
 
 ul li:hover ul li { 
    display: block; 
+}
+
+.aspect-ratio {
+    position: relative;
+    align: right 0;
+    width: 65%;
+    height: 0;
+    padding-bottom: 52%; 
+  }
+  
+  .aspect-ratio iframe {
+    position: absolute;
+    width: 65%;
+    height: 100%;
+    right: 0;
+    top: 0;
+  }
+
+iframe {
+    float:right;
+    width: 65%;
+    height:50%;
 }
