@@ -13,6 +13,7 @@ ul {
 
 ul li { 
    float: left; 
+   margin-top: 1px;
    width: 200px; 
    height: 40px; 
    background-color: black; 
@@ -25,7 +26,8 @@ ul li {
 ul li a { 
    text-decoration: none; 
    color: white; 
-   display: block; } 
+   display: block; 
+} 
 
 ul li a:hover { 
        background-color: green; 
@@ -59,4 +61,16 @@ iframe {
     float:right;
     width: 65%;
     height:50%;
+    background-color: teal
 }
+
+table {
+    margin-top: 15px;
+    border-collapse: collapse;
+    border: 1px solid #aaa;
+    width: 100%;
+    }
+
+    table tbody tr td{
+        border: #aaa 1px solid;
+    }
